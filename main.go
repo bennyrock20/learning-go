@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"learning-go/utils/calculator"
 	"learning-go/utils/person"
+	"learning-go/utils/webserver"
 )
 
-func main() {
-
+func run_go() {
 	calc := calculator.Calculator{}
 
 	a := 4
@@ -50,5 +50,18 @@ func main() {
 
 	// print json
 	fmt.Println(p2.ToJSON())
+}
+
+func run_server() {
+	webserver.Up()
+
+}
+func main() {
+
+	// run_go()
+
+	// Testin web server
+
+	run_server()
 
 }
