@@ -1,1 +1,1 @@
-# learning-go
+# My First Steps with Go
