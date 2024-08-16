@@ -33,13 +33,20 @@ func main() {
 
 	// Another test
 
-	person := person.Person{
+	p1 := person.Person{
 		FirstName: "Wil",
 		LastName:  "Tapia",
 		Age:       35,
 	}
 
-	fmt.Println("Full Name:", person.FullName())
-	fmt.Println("Is Adult", person.IsAdult())
+	fmt.Println("Full Name:", p1.FullName())
+	fmt.Println("Is Adult", p1.IsAdult())
+
+	// Test "Constructor Function"
+
+	p2 := person.NewPerson("Jesse", "Guncay", 34)
+
+	fmt.Println("Full Name:", p2.FullName())
+	fmt.Println("Is Adult", p2.IsAdult())
 
 }

@@ -7,6 +7,15 @@ type Person struct {
 	Age       int
 }
 
+// Constructor function returning a pointer to Person
+func NewPerson(firstName, lastName string, age int) *Person {
+	return &Person{
+		FirstName: firstName,
+		LastName:  lastName,
+		Age:       age,
+	}
+}
+
 func (p Person) FullName() string {
 	return p.FirstName + " " + p.LastName
 }
