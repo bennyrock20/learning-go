@@ -25,7 +25,7 @@ func logging(f http.HandlerFunc) http.HandlerFunc {
 
 func main(w http.ResponseWriter, r *http.Request) {
 	// fmt.Fprintf(w, "Hello, you've requested: %s\n", r.URL.Path)
-	tmpl := template.Must(template.ParseFiles("./utils/webserver/layout.html"))
+	tmpl := template.Must(template.ParseFiles("./webserver/layout.html"))
 
 	data := TodoPageData{
 		PageTitle: "My TODO list",

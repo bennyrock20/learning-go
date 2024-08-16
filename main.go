@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"learning-go/utils/calculator"
-	"learning-go/utils/person"
-	"learning-go/utils/webserver"
+	"learning-go/calculator"
+	"learning-go/person"
+	"learning-go/webserver"
 )
 
 func run_go() {
