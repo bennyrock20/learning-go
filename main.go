@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"learning-go/utils/calculator"
+	"learning-go/utils/person"
 )
 
 func main() {
@@ -29,5 +30,16 @@ func main() {
 	} else {
 		fmt.Printf("a: %d, b: %d, div: %d\n", a, b, div)
 	}
+
+	// Another test
+
+	person := person.Person{
+		FirstName: "Wil",
+		LastName:  "Tapia",
+		Age:       35,
+	}
+
+	fmt.Println("Full Name:", person.FullName())
+	fmt.Println("Is Adult", person.IsAdult())
 
 }
