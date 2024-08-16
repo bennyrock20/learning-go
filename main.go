@@ -48,4 +48,7 @@ func main() {
 	// Test String methoda
 	fmt.Print(p2)
 
+	// print json
+	fmt.Println(p2.ToJSON())
+
 }

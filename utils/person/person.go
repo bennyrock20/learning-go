@@ -1,12 +1,15 @@
 package person
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 // Define a struct to represent a Person
 type Person struct {
-	FirstName string
-	LastName  string
-	Age       int
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
+	Age       int    `json:"age"`
 }
 
 // Constructor function returning a pointer to Person
@@ -29,4 +32,13 @@ func (p Person) IsAdult() bool {
 // String method to convert the Person struct to a string.
 func (p Person) String() string {
 	return fmt.Sprintf("Person: %s %s, Age: %d", p.FirstName, p.LastName, p.Age)
+}
+
+// ToJSON converts the Person struct to a JSON string.
+func (p *Person) ToJSON() (string, error) {
+	jsonData, err := json.Marshal(p)
+	if err != nil {
+		return "", fmt.Errorf("error marshalling to JSON: %v", err)
+	}
+	return string(jsonData), nil
 }
