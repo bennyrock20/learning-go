@@ -1,5 +1,7 @@
 package person
 
+import "fmt"
+
 // Define a struct to represent a Person
 type Person struct {
 	FirstName string
@@ -22,4 +24,9 @@ func (p Person) FullName() string {
 
 func (p Person) IsAdult() bool {
 	return p.Age >= 18
+}
+
+// String method to convert the Person struct to a string.
+func (p Person) String() string {
+	return fmt.Sprintf("Person: %s %s, Age: %d", p.FirstName, p.LastName, p.Age)
 }

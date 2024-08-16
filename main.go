@@ -45,8 +45,7 @@ func main() {
 	// Test "Constructor Function"
 
 	p2 := person.NewPerson("Jesse", "Guncay", 34)
-
-	fmt.Println("Full Name:", p2.FullName())
-	fmt.Println("Is Adult", p2.IsAdult())
+	// Test String methoda
+	fmt.Print(p2)
 
 }
